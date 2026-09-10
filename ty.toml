@@ -1,0 +1,9 @@
+# CuTeDSL's DKG checkout uses a runtime import hook, which `ty` intentionally
+# does not execute.  Use the normal wheel layout instead, so Eglot can follow
+# the complete `cutlass.*` package and its annotations.
+[environment]
+python = ".venv/bin/python"
+extra-paths = [
+  ".venv/lib/python3.12/site-packages",
+  ".venv/lib/python3.12/site-packages/nvidia_cutlass_dsl/dsl_packages",
+]
